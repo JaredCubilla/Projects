@@ -3,7 +3,10 @@ Check if Palindrome - Javascript
 */
 
 function palindrominator(str) {
-	return (str === str.split('').reverse().join(''));
+	if (str === "") {
+		return "Empty String";
+	}
+	return (str.toLowerCase() === str.toLowerCase().split('').reverse().join(''));
 }
 
 console.log(palindrominator("pizza")); // false

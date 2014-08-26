@@ -3,6 +3,9 @@ Factorial Finder - Javascript
 */
 
 function factorialFinderRecursion(num) {
+	if (isNaN(num)) {
+		return "Not a number";
+	}
 	if (num === 0) {
 		return 1;
 	}
@@ -10,6 +13,10 @@ function factorialFinderRecursion(num) {
 }
 
 function factorialFinderLoop(num) {
+	if (isNaN(num)) {
+		return "Not a number";
+	}
+	
 	if (num === 0) {
 		return 1;
 	}

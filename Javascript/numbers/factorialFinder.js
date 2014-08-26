@@ -19,3 +19,7 @@ function factorialFinderLoop(num) {
 	}
 	return num2;
 }
+
+console.log(factorialFinderRecursion(5)); // 120
+console.log(factorialFinderRecursion(1)); // 1
+console.log(factorialFinderRecursion(3)); // 6

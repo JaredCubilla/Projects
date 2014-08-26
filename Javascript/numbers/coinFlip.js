@@ -15,3 +15,7 @@ function coinFlip(count) {
 	}
 	return obj;
 }
+
+console.log(coinFlip(2)); // returns an object properties headCount, tailsCount and a record that is 2 items long
+console.log(coinFlip(5)); // returns an object properties headCount, tailsCount and a record that is 5 items long
+console.log(coinFlip(1)); // returns an object properties headCount, tailsCount and a record that is 1 item long

@@ -3,12 +3,31 @@ Pig Latin - Javascript
 */
 
 function igpayAtinlay(str) {
-	if (str.charAt(0) === 'a' || str.charAt(0) === 'e' || str.charAt(0) === 'i' || str.charAt(0) === 'o' || str.charAt(0) === 'u') {
-		return str += 'way';
-	}
+	var returnArray = [],
+		wordArray = str.split(' ');
 
-	return str.substr(1, str.length+1) + str.charAt(0).toLowerCase() + 'ay';
+	for (var i = 0; i < wordArray.length; i++) {
+		var word = wordArray[i];
+		var beginning = word.charAt(0);
+
+		if (/[aeiouAEIOU]/.test(beginning)) {
+			returnArray.push(word += 'way');
+			continue;
+		}
+
+		for (var ii = 1; ii < word.length; ii++) {
+			if (/[aeiouAEIOU]/.test(word.charAt(ii))) {
+				break;
+			} else {
+				beginning += word.charAt(ii);
+			}
+		}
+
+		returnArray.push(word.substr(beginning.length) + beginning + 'ay');
+	}
+	return returnArray.join(' ');
 }
 
 console.log(igpayAtinlay("pizza")); // "izzapay"
 console.log(igpayAtinlay("apple")); // "appleway"
+console.log(igpayAtinlay("happy meal")); // "appyhay ealmay"

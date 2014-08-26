@@ -3,7 +3,7 @@ Mega Project List
 
 A list of practical projects that anyone can solve in any programming language (See [solutions](https://github.com/thekarangoel/Projects-Solutions)). These projects are divided in multiple categories, and each category has its own folder.
 
-This is a fork of the original Projects repo, filled with my own solutions to several of these projects.
+This is a fork of the original Projects repo, filled with my own solutions in Javascript to several of these projects.
 
 ================================
 
